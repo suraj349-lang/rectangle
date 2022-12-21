@@ -1,10 +1,8 @@
 const express=require('express')
 const app=express();
+const feedRoutes=require("./routes/feed")
 
 const port=process.env.PORT || 3000
-app.get("/home",(req,res,next)=>{
-    res.send("Hello world")
-})
-app.listen(port,()=>{
-    console.log("listening on 3000")
-});
+app.use("/feed",feedRoutes)
+
+app.listen(port);
