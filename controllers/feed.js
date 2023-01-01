@@ -1,8 +1,12 @@
 const Post=require('../model/Post')
 
 exports.getPosts=(req,res,next)=>{
+    const post=new Post({
+        title:"Suraj",
+        content:"This is the content"
+    })
 
-    res.status(200).json(Post("Suraj","This is the content"))
+    res.status(200).json({post})
 
 };
 
