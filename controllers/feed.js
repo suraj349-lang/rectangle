@@ -1,8 +1,8 @@
+const Post=require('../model/Post')
+
 exports.getPosts=(req,res,next)=>{
 
-    res.status(200).json({
-        post:{title:"First Post",content:"This is an image"}
-    })
+    res.status(200).json(Post("Suraj","This is the content"))
 
 };
 
